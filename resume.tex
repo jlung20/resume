@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+\usepackage[margin=0.45in]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,urlcolor=MidnightBlue]{hyperref}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{amssymb,graphicx}
+\usepackage{changepage}
+\usepackage{hanging}
+\usepackage[inline]{enumitem}
+
+\newcommand{\textimagesmall}[2]{
+	\begingroup
+	\setbox0=\hbox{\includegraphics[width=1em]{#1}}%
+	\parbox{\wd0}{\box0}\endgroup ~ #2%
+}
+
+\makeatletter
+\def\@seccntformat#1{%
+  \expandafter\ifx\csname c@#1\endcsname\c@section\else
+  \csname the#1\endcsname\quad
+  \fi}
+\makeatother
+
+\begin{document}
+\begin{center}
+
+{\Huge \textbf{Jeffrey Lung}}
+\rule[13pt]{\textwidth}{1pt} \\ \vspace{-16pt}
+13133 Hesby Street, Sherman Oaks, CA 91423 $\blacklozenge$ (818) 212-9662 $\blacklozenge$ jlung20@ucla.edu $\blacklozenge$ \textimagesmall{github.png}{\href{https://github.com/jlung20/}{jlung20}}
+\rule[13pt]{\textwidth}{1pt} \\ \vspace{-16pt}
+\end{center}
+\setlength{\parindent}{0.55em}\par
+\textbf{\Large Education} \vspace{4pt}
+\setlength{\parindent}{1.5em}\par
+
+\textbf{UCLA}, Los Angeles, CA \hfill Expected Graduation Date: June 2020 \setlength{\parindent}{3em}\par
+Major: Computer Science\par
+GPA: $3.94/4.00$ \par %\hangpara{3em}{1}
+Relevant Coursework: Intro to CS II (Data Structures and Algorithms), Intro to Algorithms and Complexity, \setlength{\parindent}{4.5em}\par Algorithms in Bioinformatics, Intro to Machine Learning, Operating Systems Principles\setlength{\parindent}{3em}\par
+Clubs: Bruin Racing, Ultimate Frisbee, Bruin Runners\par
+Community Service: Volunteers at road and trail races (U.S. Olympic Marathon Trials, LA Marathon, etc.)\vspace{6pt}\setlength{\parindent}{0 em}\par
+\rule[10pt]{\textwidth}{.75pt} \vspace{-20pt}
+\setlength{\parindent}{0.55em}\par
+\textbf{\Large Work Experience} \vspace{4pt}
+\setlength{\parindent}{1.5em}\par
+\textbf{DevOps Intern, Apple (FileMaker),} Santa Clara, CA \hfill June 2018 -- September 2018 \vspace{-6pt} \setlength{\parindent}{3em}\par
+\begin{itemize}[leftmargin=15.2mm]
+	\setlength\itemsep{-.4em}
+	\item Developed CI/CD pipeline for license server (Jenkins) 
+	\item Analyzed and designed performance regression testing infrastructure and methodology (AWS DynamoDB and Lambda, Splunk, and Python)
+\end{itemize} \setlength{\parindent}{1.5em}\par \vspace{-6pt}
+\textbf{Software Development Intern, Northrop Grumman,} Woodland Hills, CA \hfill June 2017 -- August 2017 \vspace{-6pt} \setlength{\parindent}{3em}\par
+\begin{itemize}[leftmargin=15.2mm]
+	\setlength\itemsep{-.4em}
+	\item Wrote scripts generating image sets as part of test suite input (MATLAB and Bash)
+	\item Developed application-level smoke tests of computer vision algorithm, which identified algorithmic and implementation defects (Bash)
+	\item Refactored a significant portion of the project's code (C++)
+	\item Benchmarked the algorithm and implemented optimizations---removing unnecessary branches, uncoalesced memory accesses, and unnecessary and inefficient arithmetic---that improved performance over the baseline by more than 35\%
+\end{itemize}
+\rule[10pt]{\textwidth}{.75pt} \vspace{-20pt}
+\setlength{\parindent}{0.55em}\par
+\textbf{\Large Projects} \vspace{4pt}\setlength{\parindent}{1.5em}\par
+\textbf{Inversion Detection in Genome Alignment} (Python) \hfill March 2018 \vspace{-6pt} \setlength{\parindent}{3em}\par 
+\begin{itemize}[leftmargin=15.2mm]
+	\setlength\itemsep{-.4em}
+	\item Aligned 60 million reads (each of length 50) to a simulated genome of 100 million base pairs
+	\item Developed an inversion finding algorithm (first identifying candidate regions and then employing Smith-Waterman alignment on reference and reversed consensus substrings)
+	\item Outperformed all grad students in the class
+\end{itemize} \vspace{-6pt} \setlength{\parindent}{1.5em}\par
+\textbf{Recyclopedia} (Python) \hfill January 2018 \vspace{-6pt} \setlength{\parindent}{3em}\par 
+\begin{itemize}[leftmargin=15.2mm]
+	\setlength\itemsep{-.4em}
+	\item Developed at IDEA Hacks 2018 as a means to educate children about proper recycling habits
+	\item Integrated barcode scanner input to Raspberry Pi and determined item's recyclability based on its scanning history
+	\item Established project-specific message format for serial communication between Raspberry Pi and Arduino
+\end{itemize}
+\rule[10pt]{\textwidth}{.75pt} \vspace{-20pt}
+\setlength{\parindent}{0.55em}\par
+\textbf{\Large Activities} \vspace{4pt}\setlength{\parindent}{1.5em}\par
+\textbf{Bruin Racing (automotive), UCLA} \hfill September 2016 -- December 2017 \vspace{-6pt} \setlength{\parindent}{3em}\par 
+\begin{itemize}[leftmargin=15.2mm]
+	\setlength\itemsep{-.4em}
+	\item Member of SAE Baja team's testing group, responsible for data collection and design verification of their off-road race cars
+	\item Contributed to:
+	\begin{enumerate*}[label={(\arabic*)}]
+		\item design and installation of the tachometer and
+		\item datalogging for the tachometer and temperature sensor; gained experience with soldering, SolidWorks, and manufacturing
+	\end{enumerate*}
+	\item Integrated strain gauges, operational amplifier, and Arduino in an effort to validate FEA simulation
+\end{itemize}
+\rule[10pt]{\textwidth}{.75pt} \vspace{-20pt}
+\setlength{\parindent}{0.55em}\par
+\textbf{\Large Technical Skills} \vspace{3pt}\setlength{\parindent}{1.5em}\par
+\begin{adjustwidth}{1.5em}{}
+C $\blacklozenge$ C++ $\blacklozenge$ Python $\blacklozenge$ Object-oriented programming and design $\blacklozenge$ AWS (DynamoDB and Lambda) $\blacklozenge$ \LaTeX\! $\blacklozenge$ Jenkins automation server $\blacklozenge$ Splunk $\blacklozenge$ Arduino $\blacklozenge$ MATLAB $\blacklozenge$ Bash $\blacklozenge$ Git $\blacklozenge$ Familiar with Linux environment \vspace{8pt}
+\end{adjustwidth}
+% fix second line's indentation, or lack thereof
+% consider using \textbullet
+% Want to have each line take up the full line?
+\pagenumbering{gobble}
+\end{document}
